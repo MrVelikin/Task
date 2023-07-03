@@ -11,6 +11,11 @@ using namespace std;
  
 int main(int argc, char *argv[]) 
 {
+    if(argc!=3)
+    {
+        cout<<"Wrong format. Correct : TapeSort *.bin *.txt "<<endl;
+        return 0;
+    }
     fstream Conv;
     Conv.open(argv[2],ios::out);
 

@@ -273,7 +273,11 @@ public:
 
 int main(int argc,char *argv[])
 {
-    
+    if(argc!=3)
+    {
+        cout<<"Wrong format. Correct : TapeSort *.bin *.bin "<<endl;
+        return 0;
+    }
     FileTape MainTape(argv[1],"rb+");
     Config conf("Config.txt");
     int Ram=conf.Ram_Size();
